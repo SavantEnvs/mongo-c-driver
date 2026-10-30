@@ -1,0 +1,10 @@
+project: savantenvs/mongo-c-driver
+target: fuzz-validate
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz-validate/testsuite
+cmds:
+  - cmd: /mayhem/fuzz-validate
+    libfuzzer: true
+    dictionary: /mayhem/mayhem/fuzz-validate/fuzz-validate.dict
+    timeout: 5

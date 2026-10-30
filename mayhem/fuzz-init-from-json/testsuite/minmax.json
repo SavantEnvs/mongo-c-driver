@@ -1,0 +1,1 @@
+{"a": {"$minKey": 1}, "b": {"$maxKey": 1}, "u": {"$undefined": true}, "s": {"$symbol": "sym"}}
