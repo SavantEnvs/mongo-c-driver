@@ -1,0 +1,9 @@
+project: savantenvs/mongo-c-driver
+target: fuzz-bson-utf8-escape-for-json
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz-bson-utf8-escape-for-json/testsuite
+cmds:
+  - cmd: /mayhem/fuzz-bson-utf8-escape-for-json
+    libfuzzer: true
+    timeout: 5
